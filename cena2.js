@@ -41,7 +41,7 @@ class cena2 extends Phaser.Scene {
         for (let i = 0; i < platformConfigs.length; i++) {
         const [x, y, scale, width, height, offsetX, offsetY] = platformConfigs[i];
 
-        const platform = this.platforms.create(x, y, 'ground').setScale(1).refreshBody();
+        const platform = this.platforms.create(x, y, 'ground').setScale(scale).refreshBody();
 
         platform.body.setSize(width, height);
         platform.body.setOffset(offsetX, offsetY);
