@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bruxa</title>
     <script src="https://cdn.jsdelivr.net/npm/phaser@3/dist/phaser.js"></script>
-    <style> body { display: flex; justify-content: center; align-items:center; height: 100vh; margin: 0; }
+    <style> body { margin: 0;}
     </style>
     <script src="cena1.js"></script>
     <script src="cena2.js"></script>
@@ -16,8 +16,12 @@
         // Configuração do jogo
         var config = {
             type: Phaser.AUTO,
+            scale: {
+                mode: Phaser.Scale.FIT,
+                autoCenter: Phaser.Scale.CENTER_BOTH,
             width: 800,
             height: 700,
+            },
             physics: {
                 default: 'arcade',
                 arcade: {
@@ -26,6 +30,7 @@
                 }
             },
             scene: [cena1, cena2, cena3] // Adicionar as cenas aqui
+            
         };
 
         // Inicializar o jogo
